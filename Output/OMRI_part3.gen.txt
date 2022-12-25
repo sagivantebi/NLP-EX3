@@ -1,0 +1,5 @@
+(ROOT  (is  (NP  (Det  the)(Noun president))(VP (Verb  kissed)(NP (NP  (Det  a)(Noun president))(PP (Prep  on)(NP (Det  a)(Noun (Adj  fine)(Noun chief of staff)))))))it)
+(ROOT  (S  (NP  (Det  a)(Noun president))(VP (Verb  wanted)(NP (Det  the)(Noun (Adj  fine)(Noun (Adj  fine)(Noun president)))))).)
+(ROOT  (S  (NP  (Det  a)(Noun floor))(VP (Verb  ate)(NP (Det  a)(Noun (Adj  delicious)(Noun (Adj  fine)(Noun pickle)))))).)
+(ROOT  (S  (NP  (Det  a)(Noun sandwich))(VP (Verb  wanted)(NP (Det  every)(Noun chief of staff)))).)
+(ROOT  (S  (NP  (Det  a)(Noun pickle))(VP (Verb  ate)(NP (Det  the)(Noun chief of staff)))).)
