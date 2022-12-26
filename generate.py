@@ -71,7 +71,7 @@ def run_1_3(pcfg):
 
 
 def run_2(pcfg):
-    with open("grammar2.gen.txt", "w") as f:
+    with open("Output/OMRI_grammar2.gen.txt", "w") as f:
         for i in range(20):
             f.write(str(pcfg.random_sent()) + "\n")
 
@@ -91,6 +91,7 @@ def build_tree_iterative(list_tree):
         # if it's a leaf
         if len(tup) == 1:
             to_return += (" " + str(tup[0]) + ")")
+
             while stack[-1][0] == ")":
                 to_return += (stack.pop()[0])
             depth_stack -= 1
@@ -149,7 +150,7 @@ if __name__ == '__main__':
         print(pcfg.random_sent())
 
     # run_1_3(pcfg)
-    # run_2(pcfg)
+    run_2(pcfg)
 
-    print(run_3_tree(pcfg))
-    write_3(pcfg)
+    # print(run_3_tree(pcfg))
+    # write_3(pcfg)
