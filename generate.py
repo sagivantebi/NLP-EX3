@@ -150,7 +150,7 @@ if __name__ == '__main__':
         print(pcfg.random_sent())
 
     # run_1_3(pcfg)
-    run_2(pcfg)
+    # run_2(pcfg)
 
     # print(run_3_tree(pcfg))
-    # write_3(pcfg)
+    write_3(pcfg)
