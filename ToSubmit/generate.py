@@ -86,32 +86,15 @@ def build_tree_iterative(list_tree):
         # if it's a leaf
         if len(tup) == 1:
             to_return += (" " + str(tup[0]) + ")")
-            try:
-                while stack[-1][0] == ")":
-                    to_return += (stack.pop()[0])
-            except Exception:
-                pass
+
+            while stack[-1][0] == ")":
+                to_return += (stack.pop()[0])
             depth_stack -= 1
         # if it's a leaf - "chief of staff"
-        elif len(tup) >= 6:
-            to_return += (" (" + " ".join(tup[0:4]) + ")" + " (" + str(tup[4]))
-            stack.append((")", depth_stack))
-            stack.append((tup[-1], depth_stack))
-            depth_stack += 1
-            print(tup)
-            try:
-                while stack[-1][0] == ")":
-                    to_return += (stack.pop()[0])
-            except Exception:
-                pass
-        elif 3 <= len(tup) <= 5:
-            to_return += (" " + " ".join(tup) + ")")
-            print(tup)
-            try:
-                while stack[-1][0] == ")":
-                    to_return += (stack.pop()[0])
-            except Exception:
-                pass
+        elif len(tup) == 3:
+            to_return += (" " + "chief of staff" + ")")
+            while stack[-1][0] == ")":
+                to_return += (stack.pop()[0])
             depth_stack -= 1
         # if it has too choices
         else:
@@ -138,7 +121,7 @@ def run_3_tree(pcfg):
 
 
 def write_3(pcfg):
-    with open("ToSubmit/Output/OMRI_part3.gen.txt", "w") as f:
+    with open("part3.gen.txt", "w") as f:
         for i in range(5):
             f.write(str(run_3_tree(pcfg)) + "\n")
 
@@ -162,6 +145,5 @@ if __name__ == '__main__':
     # run_1_3(pcfg)
     # run_2(pcfg)
 
-    # for i in range(100):
-    #     print(run_3_tree(pcfg))
-    write_3(pcfg)
+    # print(run_3_tree(pcfg))
+    # write_3(pcfg)

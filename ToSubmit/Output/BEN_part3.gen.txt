@@ -1,0 +1,5 @@
+(ROOT  (S  (Name  Sally)(VP (Verb  understood)(PNPMult (Prep  under)(NP (Det  the)(Noun floor))))).)
+(ROOT  (S  (NP  (Det  the)(VERY (Very  very)(VERY (Very  very)(AdjNoun (Adj  perplexed)(Noun sandwich)))))(VerbNoCon sighed)).)
+(ROOT  (S  (NP  (Det  the)(VERY (Very  very)(VERY (Very  very)(AdjNoun (Adj  fine)(Noun president)))))(VP (Verb  kissed)(PNPMult (PNP  (Prep  on)(NP (Det  the)(VERY (Very  very)(AdjNoun (Adj  delicious)(Noun sandwich)))))(PNPMult (PNP  (Prep  in)(NP (Det  the)(VERY (Very  very)(AdjNoun (Adj  fine)(Noun president)))))(PNPMult (Prep  under)(NP (Det  every)(VERY (Very  very)(VERY (Very  very)(AdjNoun (Adj  fine)(Noun sandwich)))))))))).)
+(ROOT  (S  (Name  Sally)(CAV (Conj  is)(AV (AVerb  eating)(NP (Det  every)(VERY (Very  very)(AdjNoun (Adj  pickled)(Noun chief of staff))))))).)
+(ROOT  (S  (THAT1  (PA  (Pronoun  it)(Adj fine))(That that))(S1 (NP  (Det  every)(Noun pickle))(VP (Verb  kissed)(NP (Det  every)(Noun pickle))))).)

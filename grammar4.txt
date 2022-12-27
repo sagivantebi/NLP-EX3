@@ -1,0 +1,170 @@
+# b d
+# Symbols in the grammar are case-sensitive.
+# 
+# This grammar uses a convention that
+#    - terminals are lowercase          (president)
+#    - preterminals are capitalized     (Noun)
+#    - other nonterminals are all-caps  (NP)
+# 
+# This convention just makes grammars more readable to humans.  Thus:
+#
+#    - When *you* are writing grammars, you should 
+#      follow this convention unless you have a good reason not to.  
+#
+#    - But the  *program* should still work with grammars that don't
+#      follow this convention.  So how can the program reliably tell
+#      the difference between terminal and nonterminal symbols?  If
+#      there is at least one rule for rewriting a symbol, then that
+#      symbol is a nonterminal and should be rewritten.
+#######################
+
+# Rules for creating full sentences.
+
+8	ROOT	S .
+1	ROOT	S !
+1	ROOT	is it true that S ?     # mixing terminals and nonterminals is ok.
+
+# The basic grammar rules.  Here's what the abbreviations stand for:
+#    S  = sentence
+#    NP = noun phrase
+#    VP = verb phrase
+#    PP = prepositional phrase
+#    Det = determiner (sometimes called "article")
+#    Prep = preposition
+#    Adj = adjective
+
+
+
+# for a:
+1	S	Name VP
+# for b:
+2	S   Name CN
+2	CN	Connection S
+2	VP	VC VP
+2	VC	Verb Connection
+# for c:
+3	S	NP VerbNoCon
+# for d:
+4	S	NP THAT
+4   THAT    THO S
+4   THO     Tho That
+# for e:
+5	S	THAT1 S1
+5	S1	NP VP
+5	THAT1   PA That
+5	PA	Pronoun Adj
+5	VP	Verb Name
+# for f:
+6   NP  Det VERY
+6   VERY  Very VERY
+6   VERY  Very AdjNoun
+6   AdjNoun Adj Noun
+# for f:
+7   VP  Verb PNPMult
+7   PNPMult  PNP PNPMult
+7   PNPMult  Prep NP
+7   PNP Prep NP
+# for h:
+8	S	Name CONJ
+8	CONJ    Conj Adj
+# for i:
+9	S	Name CAV
+9	CAV    Conj AV
+9   AV      AVerb NP
+# for j:
+10	S	Name CNP
+10	CNP    Conj NP
+
+# Yes No Q:
+20  ROOT SQ ?
+20  SQ   Qus NPVP
+20  NPVP   NP VP
+
+# WH-word questions:
+30  SQ   Wh QNPVP
+# all except 'who':
+30  QNPVP   Qus NPVP
+30  NPVP   NP VP
+# for 'who':
+30  SQ   Who VP
+
+
+# The rest:
+2	S	NP VP
+1	VP	Verb NP
+3	NP	Det Noun
+1	NP	NP PP
+1	PP	Prep NP
+3	Noun	Adj Noun
+
+# Vocabulary.  Your program can see that "ate" is a terminal
+# symbol because there exists no rule for rewriting it.
+# Any symbol that can rewrite as a terminal (or a string of 
+# terminals, like "chief of staff") is called a "preterminal."  Notice 
+# that a preterminal is a special kind of nonterminal.
+
+1	Verb	ate
+1	Verb	wanted
+1	Verb	kissed
+1	Verb	understood
+1	Verb	pickled
+
+1	Det	the
+1	Det	a
+1	Det	every
+
+# a rule - Sally
+1	Name	Sally
+
+# b rule - and
+1	Connection	and
+
+# c rule - sighed
+1	VerbNoCon	sighed
+
+# d rule - thought
+1   Tho     thought
+1   That    that
+
+# e rule - that + pronoun
+1   Pronoun     it
+
+# f rule - very - pre-adjective
+1   Very    very
+
+# h rule - conjugations + adjactive (is + lazy)
+1	Adj	lazy
+1	Conj	is
+
+# i rule - conjugations + Active verb (is + eating + ...)
+1   AVerb   eating
+
+# Yes No rule:
+1   Qus     did
+1   Qus     will
+1   Qus     can
+1   Qus     does
+1   Qus     is
+
+# WH-word questions:
+1   Wh      what
+1   Wh      where
+1   Wh      when
+1   Wh      why
+1   Who     who
+
+1	Noun	president
+1	Noun	sandwich
+1	Noun	pickle
+1	Noun	chief of staff
+1	Noun	floor
+
+3	Adj	fine
+1	Adj	delicious
+1	Adj	perplexed
+1	Adj	pickled
+
+1	Prep	with
+1	Prep	on
+1	Prep	under
+1	Prep	in

@@ -1,0 +1,5 @@
+(ROOT  (S  (THAT1  (PA  (Pronoun  it)(Adj fine))(That that))(S1 (NP  (Det  every)(Noun president))(VP (Verb  wanted)(Name Sally)))).)
+(ROOT  (S  (Name  Sally)(CONJ (Conj  is)(Adj delicious))).)
+(ROOT  (S  (Name  Sally)(CN (Connection  and)(S (NP  (NP  (Det  the)(VERY (Very  very)(VERY (Very  very)(VERY (Very  very)(AdjNoun (Adj  pickled)(Noun floor))))))(PP (Prep  on)(NP (Det  the)(Noun sandwich))))(THAT (THO  (Tho  thought)(That that))(S (Name  Sally)(CAV (Conj  is)(AV (AVerb  eating)(NP (Det  a)(VERY (Very  very)(VERY (Very  very)(VERY (Very  very)(AdjNoun (Adj  fine)(Noun chief of staff))))))))))))).)
+(ROOT  (S  (THAT1  (PA  (Pronoun  it)(Adj fine))(That that))(S1 (NP  (Det  every)(VERY (Very  very)(VERY (Very  very)(AdjNoun (Adj  perplexed)(Noun pickle)))))(VP (VC  (Verb  wanted)(Connection and))(VP (Verb  kissed)(Name Sally))))).)
+(ROOT  (is it true that) (S (Name  Sally)(CAV (Conj  is)(AV (AVerb  eating)(NP (Det  the)(VERY (Very  very)(AdjNoun (Adj  fine)(Noun president)))))))?)
